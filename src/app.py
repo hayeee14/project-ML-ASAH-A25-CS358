@@ -119,23 +119,23 @@ else:
 
     # Bagian Export Data
     st.divider()
-    st.subheader("📂 Export Data Final")
+    st.subheader("📂 Export Data")
     
     # Update data JSON di memori dengan inputan baru dari sidebar
-    final_payload = data_ai.copy()
-    final_payload['data']['candidate']['name'] = input_name
-    final_payload['data']['candidate']['email'] = input_email
-    final_payload['data']['candidate']['photoUrl'] = photo_url_for_json
+    payload = data_ai.copy()
+    payload['data']['candidate']['name'] = input_name
+    payload['data']['candidate']['email'] = input_email
+    payload['data']['candidate']['photoUrl'] = photo_url_for_json
     
     # Konversi ke format string JSON untuk didownload
-    json_string = json.dumps(final_payload, indent=2)
+    json_string = json.dumps(payload, indent=2)
     
     col_d1, col_d2 = st.columns([3, 1])
     with col_d1:
         st.info("File ini berisi gabungan data manual kandidat dan hasil analisis AI sesuai format payload.")
     with col_d2:
         st.download_button(
-            label="📥 Download JSON Final",
+            label="📥 Download JSON",
             data=json_string,
             file_name=f"Assessment_{input_name.replace(' ', '_')}.json",
             mime="application/json"
