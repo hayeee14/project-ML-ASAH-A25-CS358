@@ -1,7 +1,14 @@
 import streamlit as st
-import json
-import pandas as pd
 import os
+import shutil
+import json
+import torch
+import whisper
+import imageio_ffmpeg 
+import subprocess
+import re
+from datetime import datetime
+from transformers import pipeline
 from PIL import Image
 
 # Konfigurasi halaman website
