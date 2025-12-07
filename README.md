@@ -39,8 +39,8 @@ Ensure you have **Python 3.10** or newer installed.
 
 ### 2. Clone Repository
 ```
-git clone [https://github.com/hafizputra/Capstone-Interview-AI.git](https://github.com/hafizputra/Capstone-Interview-AI.git)
-cd Capstone-Interview-AI
+git clone https://github.com/hayeee14/project-ML-ASAH-FT.git
+cd project-ML-ASAH-FT
 ```
 
 ### 3. Create Virtual Environment (Recommended)
@@ -60,6 +60,26 @@ This will install all required libraries including PyTorch, Whisper, and Transfo
 pip install -r requirements.txt
 ```
 (Note: ffmpeg binary is handled automatically by the application logic, no manual installation required).
+
+## System Requirements
+
+This application is optimized for standard laptops using **Base Models**. However, performance varies based on hardware specifications.
+
+| Component | Minimum (Default 'Base' Models) | Recommended (For 'Large' Models) |
+| :--- | :--- | :--- |
+| **OS** | Windows 10/11, macOS, Linux | Windows 10/11, Linux (Ubuntu) |
+| **RAM** | 8 GB | **16 GB or higher** |
+| **CPU** | Intel Core i5 / AMD Ryzen 5 | Intel Core i7 / AMD Ryzen 7 |
+| **GPU** | Optional (Runs on CPU) | **NVIDIA GPU (6GB+ VRAM)** |
+| **Storage** | 2 GB free space | 10 GB free space |
+
+> **Note on Performance:**
+> By default, the `app.py` is configured to use **`whisper-base`** and **`flan-t5-base`** to ensure smooth performance on most laptops (CPU-only).
+>
+> If you wish to use **Large Models** for higher accuracy:
+> 1. Ensure you have a dedicated NVIDIA GPU (CUDA enabled).
+> 2. Open `app.py` and change `model="google/flan-t5-base"` to `model="google/flan-t5-large"`.
+> 3. Change `whisper.load_model("base")` to `whisper.load_model("large")`.
 
 # How to Run
 1. Start the application using Streamlit:
