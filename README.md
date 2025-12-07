@@ -38,11 +38,13 @@ Ensure you have **Python 3.10** or newer installed.
 * **GPU:** Optional (Nvidia CUDA), but highly recommended for faster transcription.
 
 ### 2. Clone Repository
-```bash
+```
 git clone [https://github.com/hafizputra/Capstone-Interview-AI.git](https://github.com/hafizputra/Capstone-Interview-AI.git)
 cd Capstone-Interview-AI
+```
 
 ### 3. Create Virtual Environment (Recommended)
+```
 # Windows
 python -m venv venv
 venv\Scripts\activate
@@ -50,15 +52,20 @@ venv\Scripts\activate
 # Mac/Linux
 python3 -m venv venv
 source venv/bin/activate
+```
 
 ### 4. Install Dependencies
 This will install all required libraries including PyTorch, Whisper, and Transformers.
+```
 pip install -r requirements.txt
+```
 (Note: ffmpeg binary is handled automatically by the application logic, no manual installation required).
 
 # How to Run
 1. Start the application using Streamlit:
+```
 streamlit run app.py
+```
 2. Your browser will automatically open http://localhost:8501.
 3. Steps to use:
 * Select the Job Position (e.g., Machine Learning Engineer).
@@ -87,3 +94,8 @@ Relevance Guardrail (Python): The system extracts technical keywords relevant to
 2. Reasoning Generation (LLM): The score is fed into Google Flan-T5, which generates a professional, human-like justification for the score given.
 
 # Team Members
+* **Muhammad Rayhan**, M262D5Y1357, sebagai PIC Model & Training (Streamlit/Interface)
+* **Hafiz Putra Mahesta**, M262D5Y0714, sebagai PIC Integrasi, Model STT, & Fitur (Confidence Score)
+* **Fahri Rasyidin**, M262D5Y0566, sebagai PIC Data & Evaluasi (Dataset, Kunci Jawaban, WER)
+
+Note: This project is designed for Localhost Deployment as a Proof of Concept (PoC). Video URLs in the JSON report are simulated for demonstration purposes.
