@@ -100,7 +100,7 @@ streamlit run app.py
 Capstone-Interview-AI/
 ├── app.py                      # Main Application Logic (Streamlit)
 ├── requirements.txt            # Dependency List
-├── A25_CS358_Notebook.ipynb    # Research Notebook (Accuracy/WER Validation)
+├── notebook.ipynb              # Research Notebook (Accuracy/WER Validation)
 ├── final_assessment_result.json # Sample Output
 └── README.md                   # Documentation
 ```
