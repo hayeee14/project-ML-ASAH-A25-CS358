@@ -81,6 +81,16 @@ This application is optimized for standard laptops using **Base Models**. Howeve
 > 2. Open `app.py` and change `model="google/flan-t5-base"` to `model="google/flan-t5-large"`.
 > 3. Change `whisper.load_model("base")` to `whisper.load_model("small")`.
 
+## AI Model Information
+
+This project utilizes pre-trained Deep Learning models which are **downloaded automatically** upon the first execution of the application. No manual model file upload is required.
+
+* **Speech-to-Text:** OpenAI Whisper (`base` model)
+* **Reasoning/NLP:** Google Flan-T5 (`base/large` model) via Hugging Face Transformers.
+
+> **Note to Reviewer:**
+> Since we use pre-trained models directly from the `transformers` and `whisper` libraries, the model weights are not stored in a static Google Drive link but are fetched dynamically. Ensure you have an internet connection during the first run.
+
 # How to Run
 1. Start the application using Streamlit:
 ```
