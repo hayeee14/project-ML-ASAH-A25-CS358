@@ -83,13 +83,20 @@ This application is optimized for standard laptops using **Base Models**. Howeve
 
 ## AI Model Information
 
-This project utilizes pre-trained Deep Learning models which are **downloaded automatically** upon the first execution of the application. No manual model file upload is required.
+This project utilizes state-of-the-art pre-trained models. The model weights are **downloaded automatically** via the Python libraries upon the first run.
 
-* **Speech-to-Text:** OpenAI Whisper (`base` model)
-* **Reasoning/NLP:** Google Flan-T5 (`base/large` model) via Hugging Face Transformers.
+**1. Speech-to-Text Model:**
+* **Model:** OpenAI Whisper (`base` or `small`)
+* **Source Repository:** [https://github.com/openai/whisper](https://github.com/openai/whisper)
+* **Method:** Auto-downloaded via `pip install git+https://github.com/openai/whisper.git`
+
+**2. Reasoning/LLM Model:**
+* **Model:** Google Flan-T5 (`base` or `large`)
+* **Source Repository:** [https://huggingface.co/google/flan-t5-base](https://huggingface.co/google/flan-t5-base)
+* **Method:** Auto-downloaded via `transformers` library.
 
 > **Note to Reviewer:**
-> Since we use pre-trained models directly from the `transformers` and `whisper` libraries, the model weights are not stored in a static Google Drive link but are fetched dynamically. Ensure you have an internet connection during the first run.
+> As per the library's standard behavior, the model weights are fetched dynamically from the official repositories above. Therefore, there is no separate Google Drive link for manual model download. Please ensure internet access is available during the first execution.
 
 # How to Run
 1. Start the application using Streamlit:
